@@ -1,0 +1,94 @@
+
+<!DOCTYPE>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+    </head>
+
+
+
+
+    <body>
+
+
+        <a-scene >
+
+            <a-assets>
+                    <img id="Wood" src="img/an-jihun-wood.jpg"/>
+                    <img id="Wall" src="img/Wall.jpg"/>
+                    <img id="InnerWall" src="img/InnerWall.jpg"/>
+            </a-assets>
+
+
+
+            <a-entity position=".0 0 26.504" rotation scale visible>
+                <a-camera universal-controls userheight="400">
+                    <a-cursor geometry="primitive: ring; radiusOuter: 0.015;
+                              radiusInner: 0.01; segmentsTheta: 32"  material="color: black; shader: flat" position="0 0 -0.75" rotation scale visible></a-cursor>
+                </a-camera>
+            </a-entity>
+
+
+
+            <!-- Floor -->
+            <a-plane src="#Wood" repeat="10 5" roughness ="1"  position="0 .25 1.223" rotation="-90 0 0" width="4.5" scale="6 3 .57" height="10" ></a-plane>
+
+
+
+            <!-- Outer Wall -->
+            <a-box height="3.590" depth= "-30" width="0.85" position="13.468 2.078 1.234" scale=".1 1 1" src="#Wall" repeat="23 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "30" width="0.85" position="-13.503 2.078 1.234" scale=".1 1 1"  src="#Wall" repeat="23 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "12.040" width="0.85" position="-7.490 2.078 16.23" scale=".1 1 1"rotation="0 90 0"  src="#Wall" repeat="10 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "12.040" width="0.85" position="7.490 2.078 16.23" scale=".1 1 1"rotation="0 90 0"  src="#Wall" repeat="10 4" roughness ="0"></a-box>
+            <a-box height="3.590" depth= "27.020" width="0.85" position="0 2.078 -13.735" scale=".1 1 1"rotation="0 90 0" src="#Wall" repeat="23 4" roughness ="1"></a-box>
+            <a-box position="0 3.503 16.23" rotation="0 90 0" scale="0.1 1 1"  geometry="depth:3;width:0.85;height:0.75" src="#Wall" repeat="3 1" roughness ="1"></a-box>
+
+
+            <!-- Inner Wall -->
+            <a-box height="3.590" depth= "-30" width="3" position="13.000 2.038 1.234" scale=".1 1 1" src="#InnerWall" repeat="23 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "30" width="3" position="-13.200 2.078 1.234" scale=".1 1 1"  src="#InnerWall" repeat="23 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "26.4" width="3" position="0 2.078 -13.2" scale=".1 1 1"rotation="0 90 0" src="#InnerWall" repeat="23 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "12.040" width="3" position="-7.490 2.078 16.05" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "11.67" width="3" position="7.343 2.078 16.05" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
+            <a-box position="0.02 3.503 16.05" rotation="0 90 0" scale="0.1 1 1"  geometry="depth:3;width:3;height:0.75" src="#InnerWall" repeat="3 1" roughness ="1"></a-box>
+
+            <a-entity id="LDoor"  position="-0.752 1.729 16.23">
+                <a-box position=".02 0 0" rotation="0 90 0" scale="0.1 1 1"  geometry="depth:1.50;width:0.85;height:2.870" src="#Wood" ></a-box>
+                <a-animation attribute="rotation" to="0 -90 0" easing="linear" dur="500" fill="both" direction="alternate"   begin="click" > </a-animation>
+                <a-animation attribute="position"to="-1.504 1.729 16.942" easing="linear" dur="500" fill="both" direction="alternate"   begin="click"> </a-animation>
+            </a-entity>
+
+
+            <a-entity id="RDoor"  position="0.752 1.729 16.23">
+                <a-box position=".02 0 0" rotation="0 90 0" scale="0.1 1 1"  geometry="depth:1.50;width:0.85;height:2.870" src="#Wood"></a-box>
+                <a-animation attribute="rotation" to="0 90 0" easing="linear" dur="500" fill="both" direction="alternate"   begin="click" > </a-animation>
+                <a-animation attribute="position"to="1.504 1.729 16.942" easing="linear" dur="500" fill="both" direction="alternate"   begin="click"> </a-animation>
+            </a-entity>
+
+            <a-box height="3.590" depth= "8.590" width="3" position="-8.95 2.078 0.709" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "6.040" width="3" position="9.904 2.078 0.709" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "6.040" width="3" position="1.954 2.078 0.709" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
+
+
+            <a-box height="3.590" depth= "11.67" width="3" position="2.845 2.078 10.05" scale=".1 1 1"rotation="0 180 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "14" width="3" position="-.10  2.078 -6.453" scale=".1 1 1"rotation="0 180 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= ".81" width="3" position="3.137 1.882 4.412" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
+            <a-box height="3.590" depth= "7.640.040" width="3" position="9.207 1.882 4.12" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
+
+
+
+
+            <a-entity environment="preset: forest;  dressingAmount: 500; fog: .2; skyColor: #59c5ff; horizonColor:#d0e9fd;  "></a-entity>
+        </a-scene>
+
+
+
+
+
+
+    </body>
+</html>
+
+
