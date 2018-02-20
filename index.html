@@ -2,8 +2,11 @@
 <!DOCTYPE>
 <html>
     <head>
-        <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+
+
 
     </head>
 
@@ -13,16 +16,26 @@
     <body>
 
 
-        <a-scene >
+
+
+    <a-scene >
+
 
             <a-assets>
                     <img id="Wood" src="img/an-jihun-wood.jpg"/>
                     <img id="Wall" src="img/Wall.jpg"/>
                     <img id="InnerWall" src="img/InnerWall.jpg"/>
+                <a-asset-item id="Window" src="models/old_top_rounded_window/scene.gltf"></a-asset-item>
+                <a-asset-item id="Couch" src="models/couch/scene.gltf"></a-asset-item>
+                <a-asset-item id="Fridge" src="models/fridge/scene.gltf"></a-asset-item>
+                <a-asset-item id="Bed" src="models/bed/scene.gltf"></a-asset-item>
+                <a-asset-item id="Desk" src="models/antique_desk/scene.gltf"></a-asset-item>
+                <a-asset-item id="Shelf" src= "models/shelf/scene.gltf"></a-asset-item>
+
             </a-assets>
 
 
-
+            <!--Start Pos and Raycaster -->
             <a-entity position=".0 0 26.504" rotation scale visible>
                 <a-camera universal-controls userheight="400">
                     <a-cursor geometry="primitive: ring; radiusOuter: 0.015;
@@ -30,12 +43,81 @@
                 </a-camera>
             </a-entity>
 
+            <a-entity gltf-model="#Window" position="-5.248 0.474 16.37" scale="0.1 0.1 0.1" ></a-entity>
+            <a-entity gltf-model="#Window" position="-5.248 0.474 15.907" scale="0.1 0.1 0.1" ></a-entity>
+            <a-entity gltf-model="#Window" position="5.248 0.474 16.37" scale="0.1 0.1 0.1" ></a-entity>
+            <a-entity gltf-model="#Window" position="5.248 0.474 15.907" scale="0.1 0.1 0.1" ></a-entity>
+            <a-entity gltf-model="#Fridge" position="-0.908 1.884 -6.536" rotation="0 180 0" scale="0.397 0.397 0.397"></a-entity>
+            <a-entity gltf-model="#Bed" position="3.97 0.033 -14.054" scale="0.021 0.021 0.021"></a-entity>
+            <a-entity gltf-model="#Desk" position="10.96 0 9.729" scale="1.264 1.264 1.264"></a-entity>
+            <a-entity gltf-model="#Shelf" position="12.745 0.235 -8.793" rotation="0 90.64192318969624 0" scale="0.391 0.391 0.391"  ></a-entity>
+
+
+            <!-- couch -->
+            <a-box position="-6.341 .45 10.670" scale="0.379 1.512 5.254" color="#000000"></a-box>
+            <a-box position="-7.412 0.559 10.650" scale="1.73 0.608 4.436" color="#272727"></a-box>
+            <a-box position="-7.412 .45 8.362" scale="1.821 1.508 0.636" color="#000000"></a-box>
+            <a-box position="-7.412 .45 12.980" scale="1.821 1.508 0.636" color="#000000"></a-box>
+
+            <!-- couch -->
+            <a-box position="-10.410 .45 6.048" rotation="0 90 0" scale="0.379 1.512 4.141" color="#000000"></a-box>
+            <a-box position="-10.454 0.559 7.012" rotation="0 90 0" scale="1.73 0.608 3.622" color="#272727"></a-box>
+            <a-box position="-8.651 .45 7.126"  rotation="0 90 0" scale="1.821 1.508 0.636" color="#000000"></a-box>
+            <a-box position="-12.157 .45 7.126" rotation="0 90 0" scale="1.821 1.508 0.636"color="#000000"></a-box>
+
+            <!-- TV -->
+            <a-box position="-12.934 2.126 10.699" scale="0.256 0.118 3.5" ></a-box>
+            <a-box position="-12.927 3.079 10.699" scale="0.256 1.564 3.5" color="#000000"></a-box>
+
+            <!-- Coffee Table -->
+            <a-cylinder  position="-10.537 0.2 10.663" scale="1 1.065 1" color="#893a01"> </a-cylinder>
+            <a-cylinder  position="-10.534 .765 10.540" scale="1.46 .123 1.757" geometry="segmentsRadial:8" color="#893a01" > </a-cylinder>
+
+            <!-- Side Table -->
+            <a-box position="-7.252 1.38 6.973" scale="1.861 0.146 1.873" color="#893a01" ></a-box>
+            <a-box position="-7.252 0.85 6.973" scale="0.47 1.156 0.061" rotation="0 45 0" color="#893a01"></a-box>
+            <a-box position="-7.252 0.85 6.973" scale="0.47 1.156 0.061" rotation="0 -45 0" color="#893a01"></a-box>
+            <a-box position="-7.252 0.85 6.973" scale="0.47 1.156 0.061" rotation="0 0 0" color="#893a01"></a-box>
+
+
+            <!-- Stove -->
+            <a-box position="-7.989 .92 -12.139" rotation="0 90.01166961505233 0" scale="1.73 0.103 10.084"></a-box>
+
+
+            <a-box position="-11.872 0.217 -12.139" rotation="0 90.012 0" scale="1.73 1.44 2.343" color="#fee8b8" ></a-box>
+            <a-box position="-9.516 0.217 -12.139" rotation="0 90.012 0" scale="1.73 1.44 2.343" color="#fee8b8"></a-box>
+            <a-box position="-7.193 0.217 -12.139" rotation="0 90.012 0" scale="1.73 1.44 2.343" color="#fee8b8"></a-box>
+            <a-box position="-4.14 0.217 -12.139" rotation="0 90.012 0" scale="1.73 1.44 2.343" color="#fee8b8"></a-box>
+
+            <a-box position="-7.193 0.958 -12.139" rotation="0 90.012 0" scale="1.73 0.069 2.343" color="#000000"></a-box>
+
+
+            <!-- Dinner Table -->
+            <a-box position="-10.11 1. -4.321" scale="6.121 0.146 3.634" color="#893a01"></a-box>
+            <a-box position="-10.017 0.701 -1.836" scale="6.121 0.146 0.749" color="#893a01"></a-box>
+            <a-box position="-10.017 0.701 -6.906" scale="6.121 0.146 0.749" color="#893a01"></a-box>
+            <a-box position="-7.252 0.451 -1.882" scale="0.47 0.548 0.061" rotation="0 45 0" color="#893a01"></a-box>
+            <a-box position="-7.252 0.451 -6.769" scale="0.47 0.548 0.061" rotation="0 -45 0" color="#893a01"></a-box>
+            <a-box position="-7.3 0.643 -4.552" scale="0.47 0.772 0.061" rotation="0 0 0" color="#893a01"></a-box>
 
 
             <!-- Floor -->
             <a-plane src="#Wood" repeat="10 5" roughness ="1"  position="0 .25 1.223" rotation="-90 0 0" width="4.5" scale="6 3 .57" height="10" ></a-plane>
+            <a-plane src="#InnerWall" repeat="10 5" roughness ="1"  position="0 3.912 1.223" rotation="90 -180 0" width="4.5"  scale="6 3 .57" height="10" ></a-plane>
 
 
+            <!-- Light Swithc -->
+            <a-entity id="refresh-button" light="type: point; color: blue; intensity: 0"  geometry="primitive: box" material="color: red" position="2.544 2.210 14.125" scale="0.254 .264 0.185">
+
+
+                <a-animation attribute="material.color" from="black" to="red" dur="400" begin="click"  ></a-animation>
+                <a-animation attribute="light.intensity" from="0" to="1" dur="1000" begin="click" fill="both" direction="alternate"  ></a-animation>
+            </a-entity>
+
+
+
+            <a-box position="0.133 0.298 9.407" scale="1.73 0.083 12.474" color="#d50010" roughness="1"></a-box>
+            <a-box position="6.096 0.298 2.288" scale="13.675 0.083 1.827" color="#d50010" roughness="1"></a-box>
 
             <!-- Outer Wall -->
             <a-box height="3.590" depth= "-30" width="0.85" position="13.468 2.078 1.234" scale=".1 1 1" src="#Wall" repeat="23 4" roughness ="1"></a-box>
@@ -53,7 +135,7 @@
             <a-box height="3.590" depth= "12.040" width="3" position="-7.490 2.078 16.05" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
             <a-box height="3.590" depth= "11.67" width="3" position="7.343 2.078 16.05" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
             <a-box position="0.02 3.503 16.05" rotation="0 90 0" scale="0.1 1 1"  geometry="depth:3;width:3;height:0.75" src="#InnerWall" repeat="3 1" roughness ="1"></a-box>
-
+            <!-- Doors -->
             <a-entity id="LDoor"  position="-0.752 1.729 16.23">
                 <a-box position=".02 0 0" rotation="0 90 0" scale="0.1 1 1"  geometry="depth:1.50;width:0.85;height:2.870" src="#Wood" ></a-box>
                 <a-animation attribute="rotation" to="0 -90 0" easing="linear" dur="500" fill="both" direction="alternate"   begin="click" > </a-animation>
@@ -66,7 +148,7 @@
                 <a-animation attribute="rotation" to="0 90 0" easing="linear" dur="500" fill="both" direction="alternate"   begin="click" > </a-animation>
                 <a-animation attribute="position"to="1.504 1.729 16.942" easing="linear" dur="500" fill="both" direction="alternate"   begin="click"> </a-animation>
             </a-entity>
-
+            <!-- Inner Walls -->
             <a-box height="3.590" depth= "8.590" width="3" position="-8.95 2.078 0.709" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
             <a-box height="3.590" depth= "6.040" width="3" position="9.904 2.078 0.709" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
             <a-box height="3.590" depth= "6.040" width="3" position="1.954 2.078 0.709" scale=".1 1 1"rotation="0 90 0"  src="#InnerWall" repeat="10 4" roughness ="1"></a-box>
@@ -79,7 +161,7 @@
 
 
 
-
+            <a-entity position="0.345 0.88 -0.005" light="shadowCameraLeft:-10;shadowCameraBottom:-10;shadowCameraRight:10;shadowCameraTop:10;intensity:0.6"></a-entity>
             <a-entity environment="preset: forest;  dressingAmount: 500; fog: .2; skyColor: #59c5ff; horizonColor:#d0e9fd;  "></a-entity>
         </a-scene>
 
