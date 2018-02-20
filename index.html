@@ -4,7 +4,8 @@
     <head>
         <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-
+        <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+        <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script>
 
 
 
@@ -38,9 +39,9 @@
             <!--Start Pos and Raycaster -->
             
                 <a-camera universal-controls>
-                    <a-cursor geometry="primitive: ring; radiusOuter: 0.015;
-                              radiusInner: 0.01; segmentsTheta: 32"  material="color: black; shader: flat" position="0 0 -0.75" rotation scale visible></a-cursor>
-                </a-camera>
+                <a-entity cursor position="0 0 -.75" geometry= "primitive: ring; radiusOuter :0.015; radiusInner: 0.01 segmentsTheta: 32" material="color: black; shader: flat">
+        </a-entity>
+        </a-camera>
             
 
             <a-entity gltf-model="#Window" position="-5.248 0.474 16.37" scale="0.1 0.1 0.1" ></a-entity>
