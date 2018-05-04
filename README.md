@@ -8,7 +8,7 @@ https://olisaomekam.github.io/CS4331Project1.io/index.html
   - A-Frame, Three.js, HTML, Github, JavaScript
   - .gltf 
   - <a-animation> A-frame Tag
-  - Front-end is enjoyable\
+  - Front-end is enjoyable
 ## Issues
   - On click functions
   - Starting position of camera
