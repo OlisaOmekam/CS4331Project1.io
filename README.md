@@ -36,6 +36,7 @@ https://olisaomekam.github.io/CS4331Project1.io/index.html
    ![alt text](https://puu.sh/Ag3Ld/fd77cc9dc1.jpg "Interior")
    ![alt text](https://puu.sh/Ag3co/f0a55f2368.jpg "Interior")
    ![alt text](https://puu.sh/Ag3cM/5ede454f6e.jpg "Interior")
+   ![alt text](https://puu.sh/Ag3c1/df69ee53dd.png "Interior")
    ### Assets showing used models from outside sources
    ![alt text](https://puu.sh/Ag6C1/50260cd0ea.png "Assets")
    ![alt text](https://puu.sh/Ag3cV/b592cf554f.jpg.png "Assets")
