@@ -37,8 +37,8 @@ https://olisaomekam.github.io/CS4331Project1.io/index.html
    ![alt text](https://puu.sh/Ag3co/f0a55f2368.jpg "Interior")
    ![alt text](https://puu.sh/Ag3c1/df69ee53dd.png "Interior")
    ### Assets showing used models from outside sources
-   ![alt text](https://puu.sh/Ag6C1/50260cd0ea.png "Assets")
-    ![alt text](https://puu.sh/Ag3cM/5ede454f6e.jpg "Assets")
+   ![alt text](https://puu.sh/Ag3cV/b592cf554f.jpg "Assets")
+   ![alt text](https://puu.sh/Ag3cM/5ede454f6e.jpg "Assets")
    - The couch was not used and Desk model did not load into scene
    - Window https://sketchfab.com/models/c5b84ddba72d436990d412a0519ecf91#
    - Fridge https://sketchfab.com/models/2e6576fae0ea4034b09cd48722feb9a7#
